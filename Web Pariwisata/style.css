@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("img/Mount-Bromo-Tour-From-Malang.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container{
+    width: 80%;
+    margin-inline: auto;
+}
+
+.navbar {
+    padding: 20px 0 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar .box-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .box-navbar .logo h1{
+    color: white;
+    font-size: 24px;
+}
+.navbar .box-navbar .menu{
+    display: flex;
+    column-gap: 50px;
+}
+
+.navbar .box-navbar .menu li{
+    list-style-type: none;
+
+}
+
+.navbar .box-navbar .menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px 10px 15px;
+}
+
+.navbar .box-navbar .menu .active a {
+    background-color: #0050b3;
+}
+.navbar .box-navbar .menu li a:hover {
+   background-color: #0050b3;
+   transition: all .3s ease;
+}
+
+.menu-bar {
+    color: white;
+    font-size: 24px;
+    display: none;
+    transition: all 0.3 ease;
+    
+}
+.navbar.scrolling-active{
+    background-color: #0050b3;
+    padding: 30px 0 30px 0;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero .box-hero{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .box-hero .box:nth-child(1) h1{
+    color: white;
+    font-size: 3vw;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero .box-hero .box:nth-child(1) p{
+    line-height: 2;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+
+.hero .box-hero .box:nth-child(1) button {
+    width: 180px;
+    height: 50px;
+    background-color: #0050b3;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero .box-hero .box:nth-child(1) button:hover {
+    background-color: #053e83;
+    transition: all .3s ease;
+}
+
+.hero .box-hero .box:nth-child(2) img{
+    width: 100%;
+}
+
+.destinasi{
+    padding: 50px 0 50px 0;
+}
+
+.destinasi .box-destinasi{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+    row-gap: 50px;
+}
+
+.destinasi .box-destinasi .box {
+    text-align: center;
+}
+.destinasi .box-destinasi .box img{
+    width: 100%;
+    height: 200px;
+}
+
+.destinasi .box-destinasi .box p{
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.destinasi .box-destinasi .box{
+    text-align: center;
+    color: white;
+}
+
+.destinasi .box-destinasi .box button {
+    width: 120px;
+    height: 40px;
+    border: none ;
+    background-color: #0050b3;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.destinasi .box-destinasi .box button:hover{
+    background-color: #053e83;
+    transition: all 0.3s ease;
+}
+
+.booking{
+   padding-top: 50px 0 100px 0; 
+}
+.booking .box-booking {
+    color: white;
+    text-align: center;
+}
+
+.booking .box-booking h1{
+    margin-bottom: 50px;
+}
+
+.booking .box-booking h3 {
+    font-weight: 400;
+    margin-bottom: 10px;
+    animation: animasi;
+    -webkit-animation: animasi 2s infinite;
+}
+
+@keyframes animasi {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+
+.booking .box-booking button{
+    border: none;
+    min-width: 100px;
+    min-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #053e83;
+    color: white;
+    padding-inline: 10px;
+}
+
+.booking .box-booking  button i{
+    font-size: 14px;
+    font-weight: 5px;
+    margin-inline: 5px;
+
+}
+
+.footer {
+    padding: 50px 0 50px 0;
+    background-color: #0050b3;
+}
+
+.footer .box-footer {
+    display: grid;
+    grid-template-columns: 2fr auto 2fr;
+    column-gap: 100px;
+    align-items: center;
+}
+
+.footer .box-footer .box{
+    color: white;
+}
+
+.footer .box-footer .box:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.footer .box-footer .box:nth-child(2) a {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+}
+
+.footer .box-footer .box p{
+    font-weight: 200;
+}
+
+.footer .box-footer .box:nth-child(1) p{
+    font-size: 12px;
+    line-height: 2;
+    margin-top: 10px;
+}
+
+.footer .box-footer .box:nth-child(3){
+    text-align: center;
+}
+.footer .box-footer .box span{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 475){
+    .booking .box-booking button{
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero .box-hero .box:nth-child(1) button {
+        width: 150px;
+    }
+    
+}
+
+@media screen  and (max-width: 900px) {
+    .menu-bar{
+        display: block;
+    }
+    
+    .navbar .box-navbar .menu{
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        top: 70px;
+        right: 50%;
+        transform: translateX(50%);
+        opacity: 0;
+        transition: all .3s ease;
+        background-color: #0050b3;
+    }
+
+    .navbar .box-navbar .menu.menu-active{
+        top: 80px;
+        opacity: 1;
+        border-top: 1px solid white;
+    }
+
+    .hero .box-hero .box:nth-child(1) p {
+    font-size: 14px;
+    }
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    padding: 0 11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+ 
+ .img img{
+     width: 500px;
+     padding: 0 10%;
+
+ 
+ }
+ .text h1 {
+     font-size: 58px;
+     color: white;
+     position: relative;
+ }
+ 
+ .text h1::after {
+     position: absolute;
+     content: "";
+     width: 25%;
+     height: 4px;
+     background-color: tomato;
+     left: 0;
+     bottom: 2px;
+ }
+ 
+ .text p {
+    font-size: 15px;
+    color: white; 
+    line-height: 28px;
+    margin: 30px 0 45px 0;
+    max-width: 480;
+ }
+ 
+ .btn {
+     padding: 7px 25px;
+     border: 2px solid tomato;
+     border-radius: 5px;
+     color: tomato;
+     text-decoration: none;
+     margin-right: 15px;
+     transition: all .5s ease;
+ }
+ 
+ .btn:hover {
+     background-color: tomato;
+     color: #081b29;
+ }
+ 
+ .btn1 {
+     background-color: tomato;
+     color: #081b29;
+ }
+ 
+ .btn1:hover {
+     color: tomato;
+     background-color: transparent;
+ }

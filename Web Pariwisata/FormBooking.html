@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Register Tour Responsif</title>
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:"Poppins" ,sans-serif;
+        }
+        body{
+           min-height: 100vh;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           padding: 20px;
+           background: rgb(130, 106, 251);
+        }
+        .container{
+           position: relative;
+           max-width: 700px;
+           width: 100%;
+           background: #fff;
+           padding: 25px;
+           border-radius: 8px;
+           box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .container header{
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 500;
+            text-align: center;
+        }
+        .container .form{
+            margin-top: 30px;
+        }
+        .form .input-box{
+            width: 100%;
+            margin-top: 20px;  
+        }
+        .input-box label{
+            color: #333;
+        }
+        .form :where(.input-box input, .select-box){
+           position: relative;
+           height: 50px;
+           width: 100%;
+           outline: none;
+           font-size: 1rem;
+           color: #707070;
+           margin-top: 8px;
+           border: 1px solid #ddd;
+           border-radius: 6px;
+           padding: 0 15px;
+        }
+        .input-box input:focus{
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        }
+        .form .column{
+            display: flex;
+            column-gap: 15px;
+        }
+        .form .paket-box{
+            margin-top: 20px;
+        }
+        .paket-box h3{
+            color: #333;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+        .form :where(.paket-option, .paket) {
+            display: flex;
+            align-items: center;
+            column-gap: 50px;
+            flex-wrap: wrap;
+        }
+        .form .paket{
+            column-gap: 5px;
+        }
+        .paket input{
+            accent-color: rgb(130, 106, 251);
+        }
+        .form :where(.paket input, .paket label){
+            cursor: pointer;
+        }
+        .paket label{
+            color: #707070;
+        }
+        .address :where(input, .select-box){
+            margin-top: 15px;
+        }
+        .select-box select{
+            height: 100%;
+            width: 100%;
+            outline: none;
+            border: none;
+            color: #707070;
+            font-size: 1rem;
+        }
+        .form button{
+            height: 55px;
+            width: 100%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgb(130, 106, 251);
+        }
+
+        .form button:hover{
+            background-color: rgb(88, 56, 250);
+        }
+        @media screen and (max-width: 500px){
+            .form .column{
+                flex-wrap: wrap;
+            }
+            .form:where(.paket-option, .paket) {
+                row-gap: 15px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <section class="container">
+        <header>Form Booking</header>
+        <form action="#" class="form">
+            <div class="input-box">
+                <label>Nama Lengkap</label>
+                <input type="text" placeholder="Masukan Nama Lengkap" required>
+            </div>
+            <div class="input-box">
+                <label>Email</label>
+                <input type="text" placeholder="Masukan Alamat Email" required>
+            </div>
+            <div class="column">
+                <div class="input-box">
+                    <label>No.WhatsApps</label>
+                    <input type="number" placeholder="Masukan Nomor WhatsApps">
+                </div>
+
+                <div class="input-box">
+                    <label>Tanggal Trip</label>
+                    <input type="date" placeholder="Masukan Tanggal Trip">
+                </div>
+            </div>
+            <div class="paket-box">
+                <h3>Jenis Paket</h3>
+                <div class="paket-option">
+                    <div class="paket">
+                        <input type="radio" id="check-OpenTrip" name="paket" checked>
+                        <label for="check-OpenTrip">Open Trip</label>
+                    </div>
+                    <div class="paket">
+                        <input type="radio" id="check-PrivateTrip" name="paket" checked>
+                        <label for="check-PrivateTrip">Private Trip</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box address">
+                <label>Asal Peserta</label>
+                <div class="column">
+                    <div class="select-box">
+                        <select>
+                           <option hidden>Provinsi</option> 
+                           <option>Jawa Timur</option>
+                           <option>Jawa Tengah</option>
+                           <option>Jawa Barat</option>
+                           <option>DKI Jakarta</option>
+                           <option>DI.Yogyakarta</option>
+                        </select>
+                    </div>
+                    <input type="text" placeholder="Masukan Nama Kota">
+                </div>
+                <div class="column">
+                    <input type="text" placeholder="Masukan Nama Kecamatan" required>
+                    <input type="text" placeholder="Masukan Kode Pos" required>
+                </div>
+                <label>Alamat Penjemputan</label>
+                <input type="text" placeholder="Masukan Alamat Penjemputan" required>
+                <input type="text" placeholder="Masukan Jumlah Peserta" required>
+            </div>
+            <button>Daftar</button>
+            <a href="index.html"><button>Back To Home</button>
+        </form>
+    </section>
+    <a href="index.html"><button>Back To Home</button>
+</body>
+</html>
